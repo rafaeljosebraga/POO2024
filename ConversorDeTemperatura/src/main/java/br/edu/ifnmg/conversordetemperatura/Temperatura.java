@@ -16,5 +16,12 @@ public class Temperatura {
         this.valor = 0;
         this.tipoTemperatura = "celsius";
     }
+    public void setTemperatura(float valor, String tipoTemperatura){
+        this.valor = valor;
+        this.tipoTemperatura = tipoTemperatura;
+    }
+    public void exibeTemperatura(){
+        System.out.println("A temperatura é "+this.valor+" "+this.tipoTemperatura);
+    }
 
 }
