@@ -11,7 +11,10 @@ package br.edu.ifnmg.conversordetemperatura;
 public class Temperatura {
     private float valor;
     private String tipoTemperatura; 
-
-
+   
+     Temperatura(){
+        this.valor = 0;
+        this.tipoTemperatura = "celsius";
+    }
 
 }
