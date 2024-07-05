@@ -23,5 +23,13 @@ public class Temperatura {
     public void exibeTemperatura(){
         System.out.println("A temperatura é "+this.valor+" "+this.tipoTemperatura);
     }
-
+    private float farenheitParaCelsius(float valor){
+        return ((valor-32)*5/9);
+    }
+    private float kelvinParaFarenheit(float valor){
+        return (valor*9/5-459,67);
+    }
+    private float celciusParaNovoKelvin(){
+        
+    }
 }
