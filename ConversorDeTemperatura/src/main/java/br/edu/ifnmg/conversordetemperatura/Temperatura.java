@@ -19,14 +19,14 @@ public class Temperatura {
         System.out.println("A temperatura é "+this.valor);
     }
     //Converte o valor da temperatura de Fahrenheit para Celcius
-    private void fahrenheitParaCelsius()throws Exception{
+    public void fahrenheitParaCelsius()throws Exception{
         if(this.valor<-459.67){
             throw new Exception("Valor inoperavel pois a temperatura está"
                     + " abaixo do zero absoluto");
         }
         this.valor=(float)((this.valor-32)*5/9);
     }
-    private void fahrenheitParaKelvin()throws Exception{
+    public void fahrenheitParaKelvin()throws Exception{
         if(this.valor<-459.67){
             throw new Exception("Valor inoperavel pois a temperatura está"
                     + " abaixo do zero absoluto");
@@ -34,14 +34,14 @@ public class Temperatura {
         this.valor=(float)((this.valor-32)*5/9+273.15);
     }
     //Converte o valor da temperatura de Celcius para Kelvin
-    private void celciusParaKelvin()throws Exception{
+    public void celciusParaKelvin()throws Exception{
         if(this.valor<-273.15){
             throw new Exception("Valor inoperavel pois a temperatura está"
                     + " abaixo do zero absoluto");
         }
         this.valor=(float)(this.valor+273.15);
     }
-    private void celciusParaFahrenheit()throws Exception{
+    public void celciusParaFahrenheit()throws Exception{
         if(this.valor<-273.15){
             throw new Exception("Valor inoperavel pois a temperatura está"
                     + " abaixo do zero absoluto");
@@ -49,14 +49,14 @@ public class Temperatura {
         this.valor=(float)((this.valor*9/5) + 32);
     }
     //Converte o valor da temperatura de Kelvin para Fahrenheit
-    private void kelvinParaFahrenheit()throws Exception{
+    public void kelvinParaFahrenheit()throws Exception{
         if(this.valor<0){
             throw new Exception("Valor inoperavel pois a temperatura está"
                     + " abaixo do zero absoluto");
         }
         this.valor=(float)(this.valor*9/5-459.67);
     }
-    private void kelvinParaCelsius()throws Exception{
+    public void kelvinParaCelsius()throws Exception{
         if(this.valor<0){
             throw new Exception("Valor inoperavel pois a temperatura está"
                     + " abaixo do zero absoluto");
