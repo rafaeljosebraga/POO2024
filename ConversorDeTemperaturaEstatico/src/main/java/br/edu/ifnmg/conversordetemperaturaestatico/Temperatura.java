@@ -9,7 +9,7 @@ package br.edu.ifnmg.conversordetemperaturaestatico;
  * @author braga
  */
 public class Temperatura {
-    private float valor;
+    private static float valor;
      
     public void setValorTemperatura(float valor){
         this.valor = valor;
