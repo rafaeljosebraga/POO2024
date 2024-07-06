@@ -11,13 +11,6 @@ package br.edu.ifnmg.conversordetemperatura;
 public class Temperatura {
     private float valor;
      
-    public void setValorTemperatura(float valor){
-        this.valor = valor;
-    }
-    
-    public void exibeTemperatura(){
-        System.out.println("A temperatura é "+this.valor);
-    }
     //Converte o valor da temperatura de Fahrenheit para Celcius
     public void fahrenheitParaCelsius()throws Exception{
         if(this.valor<-459.67){
@@ -63,8 +56,13 @@ public class Temperatura {
         }
         this.valor=(float) ((this.valor)-273.15);
     }
-    
-    
-    //Converte a temperatura para a temperatura designada no campo de argumento
 
+    public float getValor() {
+        return valor;
+    }
+
+    public void setValor(float valor) {
+        this.valor = valor;
+    }
+    
 }
