@@ -4,6 +4,8 @@
 
 package br.edu.ifnmg.conversordetemperatura;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author braga
@@ -11,5 +13,8 @@ package br.edu.ifnmg.conversordetemperatura;
 public class ConversorDeTemperatura {
     public static void main(String[] args) {
         System.out.println("Hello World!");
+        Temperatura temp=new Temperatura();
+        LocalDate data;
+        
     }
 }

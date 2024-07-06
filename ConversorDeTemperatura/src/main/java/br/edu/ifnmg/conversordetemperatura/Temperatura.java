@@ -10,70 +10,31 @@ package br.edu.ifnmg.conversordetemperatura;
  */
 public class Temperatura {
     private float valor;
-    private String tipoTemperatura; 
    
      Temperatura(){
         this.valor = 0;
-        this.tipoTemperatura = "celsius";
     }
      
-    public void setTemperatura(float valor, String tipoTemperatura){
+    public void setValorTemperatura(float valor){
         this.valor = valor;
-        this.tipoTemperatura = tipoTemperatura;
     }
     
     public void exibeTemperatura(){
-        System.out.println("A temperatura é "+this.valor+" "
-        +this.tipoTemperatura);
+        System.out.println("A temperatura é "+this.valor);
     }
     //Converte o valor da temperatura de Fahrenheit para Celcius
-    private void fahrenheitParaCelsius(float valor){
-        this.valor=(float)((valor-32)*5/9);
+    private void fahrenheitParaCelsius(){
+        this.valor=(float)((this.valor-32)*5/9);
     }
     //Converte o valor da temperatura de Celcius para Kelvin
-    private void celciusParaKelvin(float valor){
-        this.valor=(float)(valor+273.15);
+    private void celciusParaKelvin(){
+        this.valor=(float)(this.valor+273.15);
     }
     //Converte o valor da temperatura de Kelvin para Fahrenheit
-    private void kelvinParaFahrenheit(float valor){
-        this.valor=(float)(valor*9/5-459.67);
+    private void kelvinParaFahrenheit(){
+        this.valor=(float)(this.valor*9/5-459.67);
     }
+    
     //Converte a temperatura para a temperatura designada no campo de argumento
-    public void converteTemperatura(String tipoTempFinal){
-        if(tipoTempFinal!="fahrenheit"||tipoTempFinal!="celcius"||tipoTempFinal!="kelvin"){
-            System.out.println("Temperatura não suportada");
-            return;
-        }
-        if(tipoTempFinal.equals(tipoTemperatura)){
-            return;
-        }
-        switch(tipoTemperatura){
-            case "fahrenheit":
-                if(tipoTempFinal.equals("celcius")){
-                    fahrenheitParaCelsius(valor);
-                    return;
-                }
-                fahrenheitParaCelsius(valor);
-                celciusParaKelvin(valor);
-                break;
-                
-            case "celcius":
-                if(tipoTempFinal.equals("kelvin")){
-                    celciusParaKelvin(valor);
-                    return;
-                }
-                celciusParaKelvin(valor);
-                kelvinParaFahrenheit(valor);
-                break;
-                
-            case "kelvin":
-                if(tipoTempFinal.equals("fahrenheit")){
-                    kelvinParaFahrenheit(valor);
-                }
-                kelvinParaFahrenheit(valor);
-                fahrenheitParaCelsius(valor);
-                break;
-        }
-    tipoTemperatura=tipoTempFinal;        
-    }
- }
+
+}
