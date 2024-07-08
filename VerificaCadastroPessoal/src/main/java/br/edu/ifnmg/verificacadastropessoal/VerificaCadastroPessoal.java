@@ -11,7 +11,6 @@ package br.edu.ifnmg.verificacadastropessoal;
 public class VerificaCadastroPessoal {
     public static int obterDigito(long cpf,int digito){
         String aux;
-        aux = new String();
         long cpfAux;
         aux=Long.toString(cpf);
         int tamanho= aux.length();
@@ -28,6 +27,19 @@ public class VerificaCadastroPessoal {
     }
     
     public static int obterDigito(String cpf,int digito){
+        String aux;
+        long cpfAux;
+        int tamanho= cpf.length();
+        
+        //remove caracteres não numéricos
+        aux=cpf.replaceAll("[^\\d]+", "");
+        
+        cpfAux=Long.parseLong(aux);
+        long auxLong;
+        auxLong=(long)Math.pow(10, digito);
+        cpfAux=cpfAux % auxLong;
+        cpfAux=(long) (cpfAux/Math.pow(10, digito-tamanho));
+        return (int)cpfAux;
         
     }
     
