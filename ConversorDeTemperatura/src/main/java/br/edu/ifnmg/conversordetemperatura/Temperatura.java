@@ -47,7 +47,7 @@ public class Temperatura {
             throw new Exception("Valor inoperavel pois a temperatura está"
                     + " abaixo do zero absoluto");
         }
-        this.valor=(float)(this.valor*9/5-459.67);
+        this.valor=(float)(this.valor - 273.15)*9/5+32;
     }
     public void kelvinParaCelsius()throws Exception{
         if(this.valor<0){
